@@ -4,29 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
     <title>Levels Hire</title>
 </head>
 
 <body>
-    <div>
-        <h1>Job Skills Lookup</h1>
-        <button class="home_button" onclick="window.location.href='/'">⬅️ home</button><br /><br />
-        <form method="POST" action="/process_text">
-            <label for="user_input">Enter a job role:</label>
-            <input type="text" id="user_input" name="user_input" required>
-            <button type="submit">Submit</button>
-        </form>
-        <p>{{ result }}</p>
-    </div>
-    <div>
-        <h1>Find suitable job</h1>
-        <form method="POST" action="/process_skills">
-            <label for="user_skills">Enter your skills:</label>
-            <input type="text" id="user_skills" name="user_skills" required>
-            <button type="submit">Submit</button>
-        </form>
-        <p>{{ suitable_job }}</p>
-    </div>
+    <div class="wrapper">
+        <div class="container">
+            <h1>Job Skills Lookup</h1>
+            <button class="home_button" onclick="window.location.href='/'">⬅️ refresh</button><br /><br />
+            <form method="POST" action="/process_text">
+                <label for="user_input">Enter a job role:</label>
+                <input type="text" id="user_input" name="user_input" required>
+                <button class="submit" type="submit">Submit</button>
+            </form>
+            <pre>{{ result }}</pre>
+            <div>
+                <h1>Find suitable job</h1>
+                <form method="POST" action="/process_skills">
+                    <label for="user_skills">Enter your skills:</label>
+                    <input type="text" id="user_skills" name="user_skills" required>
+                    <button class="submit" type="submit">Submit</button>
+                </form>
+                <pre>{{ suitable_job }}</pre>
+            </div>
+        </div>
 </body>
 
 </html>
