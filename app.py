@@ -29,6 +29,14 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/find-job-role')
+def find_job_role():
+    return render_template('find_job_role.html')
+
+@app.route('/skills-lookup')
+def skills_lookup():
+    return render_template('skills_lookup.html')
+
 @app.route('/process_text', methods=['POST'])
 def process_text():
     user_input = request.form['user_input']
@@ -52,7 +60,7 @@ def process_text():
                 result += f"Job Role: {row['Job Role Title']}\nSkills: {skills_list} \n\n"
         else:
             result = "No matching job roles found."
-    return render_template('index.html', result=result)
+    return render_template('skills_lookup.html', result=result)
 
 @app.route('/process_skills', methods=['POST'])
 def process_skills():
@@ -77,7 +85,7 @@ def process_skills():
         else:
             suitable_job = "No matching job roles found."
             
-    return render_template('index.html', suitable_job=suitable_job)
+    return render_template('find_job_role.html', suitable_job=suitable_job)
 
 if __name__ == '__main__':
     app.run(debug=True)
