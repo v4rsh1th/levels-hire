@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+    background-color: rgb(152, 208, 248);
+  }
+  h2 {
+    color: #333;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .round-div {
+  position:relative;
+    background-color: white;
+    border-radius: 4%;
+    padding: 28px;
+    width:40%;
+    
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    top: -50px;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  h3 {
+  font-size:14px;
+  cursor: pointer;
+  color: initial; 
+  transition: color 0.3s ease; 
+  }
+  .home_button {
+    
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.home_button:hover {
+background-color: #45a049;
+}
+h3:hover {
+font-size: 88%;
+}
+h2{
+text-align:center;
+font-family:Cursive;
+font-weight: bold;
+font-style: oblique;
+font-size: 50px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

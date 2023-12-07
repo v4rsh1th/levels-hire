@@ -25,6 +25,14 @@ with open('models/vectorizer.pkl', 'rb') as file:
 
 app = Flask(__name__)
 
+@app.after_request
+def add_security_headers(response):
+    # Add Content Security Policy header
+    response.headers['Content-Security-Policy'] = "img-src 'self'"
+
+
+    return response
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -36,6 +44,10 @@ def find_job_role():
 @app.route('/skills-lookup')
 def skills_lookup():
     return render_template('skills_lookup.html')
+
+@app.route('/career')
+def career():
+    return render_template('career.html')
 
 @app.route('/process_text', methods=['POST'])
 def process_text():

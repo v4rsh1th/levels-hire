@@ -5,18 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/homestyle.css">
+   
     <title>Levels Hire</title>
 </head>
 
 <body>
+    <div class="header">
+        <!--img src="logo.jpg"  alt="Company Logo" style="width:250px;height:200px;"-->
+        <h1><b>Levels Hire</b></h1>
+        
+    </div>
+
     <div class="wrapper">
         <div class="container">
-            <h1>Levels Hire</h1>
-            <button class="home_button" onclick="window.location.href='/skills-lookup'">Job Skills
-                Lookup</button><br /><br />
-            <button class="home_button" onclick="window.location.href='/find-job-role'">Find suitable job
-                role</button><br /><br />
+          <div class="section">
+            <button class="home_button" onclick="window.location.href='/skills-lookup'">Job Skills Lookup</button><br /><br />
+            <p>Explore skills and their relevance in the job market.</p>
+          </div>
+    
+          <div class="section">
+            <button class="home_button" onclick="window.location.href='/find-job-role'">Find Suitable Job Role</button><br /><br />
+            <p>Discover job roles that match your skills and interests.</p>
+          </div>
+    
+          <div class="section">
+            <button class="home_button" onclick="window.location.href='/career'">Career Clusters</button><br /><br />
+            <p>Explore clusters of related careers and industries.</p>
+          </div>
         </div>
+      </div>
+
+    <div class="footer">
+        <p>&copy; 2023 Levels Hire. All rights reserved.</p>
+    </div>
 </body>
 
 </html>

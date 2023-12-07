@@ -5,21 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Levels Hire</title>
 </head>
 
 <body>
     <div class="wrapper">
         <div class="container">
-            <button class="home_button" onclick="window.location.href='/'">⬅️ home</button><br /><br />
+            <button class="home_button" onclick="window.location.href='/'"><i class="fa fa-arrow-circle-left"></i> Home</button><br /><br />
             <h1>Find suitable job</h1>
             <form method="POST" action="/process_skills">
                 <label for="user_skills">Enter your skills:</label>
                 <input type="text" id="user_skills" name="user_skills" placeholder="eg: Python, Hadoop, NoSQL" required>
                 <button class="submit" type="submit">Submit</button>
             </form>
-            <pre>{{ suitable_job }}</pre>
+            <div class="result-popup">
+                <pre>{{ suitable_job }}</pre>
+              </div>
         </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 Levels Hire. All rights reserved.</p>
     </div>
 </body>
 

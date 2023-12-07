@@ -8,6 +8,9 @@ html {
 
 body {
   font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(152, 208, 248);
 }
 
 .container {
@@ -20,7 +23,12 @@ h2 {
   color: black;
   font-size: 40px;
 }
-
+h1{
+  font-family:Cursive;
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 50px;
+}
 
 .image-container {
   display: flex;
@@ -58,15 +66,17 @@ h2 {
 }
 
 .home_button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: white;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  /* margin: 10px; */
   font-size: 16px;
+}
+
+.home_button:hover {
+  background-color: #45a049;
 }
 
 input[type=text] {
@@ -83,8 +93,7 @@ input[type=text] {
     border-color: #4a4946;
   }
 
-.button:hover,
-.home_button:hover {
+.button:hover {
   background-color: #0056b3;
   /* Hover background color */
 }
@@ -102,3 +111,23 @@ button[type=submit] {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
   }
+
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.result-popup {
+  overflow-x: scroll;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  background-color: white; /* White background */
+  padding: 15px; /* Add padding for content */
+  max-width: 100%; /* Limit maximum width */
+  margin: 0 auto; /* Center the div horizontally */
+}
