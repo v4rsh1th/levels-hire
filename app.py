@@ -5,7 +5,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import pickle
 
 # Load the dataset
-dataset = pd.read_csv('data/processed/processed_data.csv')  # Update the path
+dataset = pd.read_csv('data/processed/processed_data.csv')
 
 # Load the TfidfVectorizer
 with open('models/model.pkl', 'rb') as file:
@@ -45,7 +45,6 @@ def process_text():
     if not exact_match.empty:
         skills_list = exact_match['Skills Required'].values[0]
         result = f"Exact match found!\nJob Role: {exact_match['Job Role Title'].values[0]}\nSkills: {skills_list}"
-
     else:
         user_input_vector = tfidf_vectorizer.transform([user_input])
         similarities = cosine_similarity(user_input_vector, tfidf_matrix)
@@ -84,7 +83,7 @@ def process_skills():
             suitable_job = f"Best match found! \nJob Role: {best_match}"
         else:
             suitable_job = "No matching job roles found."
-            
+                     
     return render_template('find_job_role.html', suitable_job=suitable_job)
 
 if __name__ == '__main__':
