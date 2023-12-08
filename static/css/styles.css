@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 :root {
-  color-scheme: light dark;
+  color-scheme: dark;
 }
 
 html {
@@ -124,4 +124,13 @@ button[type=submit] {
   font-size: 17px;
   text-align: center;
   font-family: "Inter", sans-serif;
+}
+
+.contributor-section {
+  margin-top: 50px;
+}
+
+.contributor-section a {
+  color: #007BFF;
+  text-decoration: none;
 }
